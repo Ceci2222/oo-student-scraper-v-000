@@ -27,8 +27,7 @@ class Scraper
       student[:twitter] = "#{link}" if link.values.include?('twitter') 
       student[:linkedin] = "#{link}" if link.values.include?('linkedin')
     end
-      student
-      binding.pry
+      
   end
 end
     # student = {
