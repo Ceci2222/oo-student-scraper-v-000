@@ -38,16 +38,6 @@ class Scraper
     end
     student
     # binding.pry
-        
-        
-      
-      # student[:twitter] = "#{link}" if link.values.include?('twitter') 
-      # student[:linkedin] = "#{link}" if link.values.include?('linkedin')
-      # student[:github] = "#{link}" if link.values.include?('github')
-    # end
-    # student
-    # binding.pry
-    
   end
 end
     
