@@ -47,7 +47,7 @@ class Scraper
   end
 end
     # student = {
-    # :github => profile.css('div.social-icon-container a')[2]['href'], :blog => profile.css('div.social-icon-container a')[3]['href'], :twitter => profile.css('div.social-icon-container a')[0]['href'], :profile_quote => profile.css(".profile-quote").text, :bio => profile.css("p").text,
+'], :blog => profile.css('div.social-icon-container a')[3]['href'], :twitter => profile.css('div.social-icon-container a')[0]['href'], :profile_quote => profile.css(".profile-quote").text, :bio => profile.css("p").text,
     # }
 
 
