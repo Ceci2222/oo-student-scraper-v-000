@@ -24,11 +24,8 @@ class Scraper
     student = {}
     profile.css('div.social-icon-container a').each do |link|
       
-      if link.values.include?('twitter') 
-        student[:twitter] = link 
-        
-      elsif link.include?('linkedin') 
-        student[:linkedin] = link
+      if link.values.include?('twitter') then student[:twitter] = link, 
+      if link.include?('linkedin') then student[:linkedin] = link
       
        
       end
