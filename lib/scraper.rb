@@ -26,7 +26,7 @@ class Scraper
       
       student[:twitter] = "#{link}" if link.values.include?('twitter') 
       student[:linkedin] = "#{link}" if link.values.include?('linkedin')
-      student[:git]
+      student[:github] = 
     end
     student
     
