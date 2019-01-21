@@ -23,7 +23,6 @@ class Scraper
     profile = Nokogiri::HTML(open(profile_url))
     
     profile.css('div.social-icon-container a').map do |link|
-      binding.pry
       if link.values.to_s.include?('twitter')
         student[:twitter] = "#{link}" 
       elsif link.values.to_s.include?('linkedin')
@@ -31,6 +30,8 @@ class Scraper
       elsif link.values.to_s.include?('github')
       end
     end
+    student
+    binding.pry
         
         
       
