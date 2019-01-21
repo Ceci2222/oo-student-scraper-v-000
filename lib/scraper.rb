@@ -10,10 +10,10 @@ class Scraper
     doc = Nokogiri::HTML(open('./fixtures/student-site/index.html'))
    
     doc.css(".student-card").each do |student|
-    s = {
-      :name => student.css("h4").text, :location => student.css('p').text, :profile_url => student.css('a').attribute("href").value
-    }
-    students << s
+      s = {
+        :name => student.css("h4").text, :location => student.css('p').text, :profile_url => student.css('a').attribute("href").value
+        }
+      students << s
     end
     students
   end
@@ -29,13 +29,13 @@ class Scraper
         student[:linkedin] = link
       
       binding.pry 
+      end
     end
-  end
     
     # student = {
     # :linkedin => profile.css('div.social-icon-container a')[1]['href'], :github => profile.css('div.social-icon-container a')[2]['href'], :blog => profile.css('div.social-icon-container a')[3]['href'], :twitter => profile.css('div.social-icon-container a')[0]['href'], :profile_quote => profile.css(".profile-quote").text, :bio => profile.css("p").text,
     # }
-  end
 
+  end
 end
 
