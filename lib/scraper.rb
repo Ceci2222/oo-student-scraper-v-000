@@ -23,6 +23,11 @@ class Scraper
     binding.pry
     #profile.css('div.social-icon-container a).collect { |
     
+    student = {}
+    profile.css('div.social-icon-container a').each do |link|
+      if link.include?('twitter') student[:twitter] = link 
+      if link.include?('linkedin') student[:linkedin] = link
+    end
     
     student = {
     :linkedin => profile.css('div.social-icon-container a')[1]['href'], :github => profile.css('div.social-icon-container a')[2]['href'], :blog => profile.css('div.social-icon-container a')[3]['href'], :twitter => profile.css('div.social-icon-container a')[0]['href'], :profile_quote => profile.css(".profile-quote").text, :bio => profile.css("p").text,
