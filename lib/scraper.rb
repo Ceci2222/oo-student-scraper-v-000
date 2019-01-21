@@ -26,12 +26,14 @@ class Scraper
       
       if link.values.include?('twitter') 
         student[:twitter] = link 
-        binding.pry
+        
       elsif link.include?('linkedin') 
         student[:linkedin] = link
       
        
       end
+      student
+      binding.pry
     end
     
     # student = {
