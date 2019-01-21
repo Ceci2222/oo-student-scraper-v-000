@@ -11,7 +11,7 @@ class Scraper
    
     doc.css(".student-card").each do |student|
       s = {
-        :name => student.css("h4").text, :location => student.css('p').text, :profile_url => student.css('a').attribute("href").value
+        :Name => student.css("h4").text, :Location => student.css('p').text, :Profile_url => student.css('a').attribute("href").value
         }
       students << s
     end
@@ -22,18 +22,18 @@ class Scraper
     student = {}
     profile = Nokogiri::HTML(open(profile_url))
     
-    student[:profile_quote] = profile.css(".profile-quote").text 
-    student[:bio] = profile.css("p").text
+    student[:Profile_quote] = profile.css(".profile-quote").text 
+    student[:Bio] = profile.css("p").text
     
     profile.css('div.social-icon-container a').map do |link|
       if link.values.to_s.include?('twitter')
-        student[:twitter] = link['href']
+        student[:Twitter] = link['href']
       elsif link.values.to_s.include?('linkedin')
-        student[:linkedin] = link['href']
+        student[:Linkedin] = link['href']
       elsif link.values.to_s.include?('github')
-        student[:github] = link['href']
+        student[:Github] = link['href']
       elsif link.values.to_s.include?('.com')
-        student[:blog] = link['href']
+        student[:Blog] = link['href']
       end
     end
     student
