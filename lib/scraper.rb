@@ -29,6 +29,7 @@ class Scraper
       elsif link.values.include?('linkedin')
         student[:linkedin]
       elsif link.values.include?('github')
+      end
     end
         
         
