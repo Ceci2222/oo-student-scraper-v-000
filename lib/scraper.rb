@@ -24,11 +24,21 @@ class Scraper
     
     profile.css('div.social-icon-container a').map do |link|
       
-      student[:twitter] = "#{link}" if link.values.include?('twitter') 
-      student[:linkedin] = "#{link}" if link.values.include?('linkedin')
-      student[:github] = "#{link}" if link.values.include?('github')
+      if link.values.include?('twitter')
+        student[:twitter] = "#{link}" 
+      elsif link.values.include?('linkedin')
+        student[:linkedin]
+      elsif link.values.include?('github')
     end
+        
+        
+      
+      # student[:twitter] = "#{link}" if link.values.include?('twitter') 
+      # student[:linkedin] = "#{link}" if link.values.include?('linkedin')
+      # student[:github] = "#{link}" if link.values.include?('github')
+    # end
     student
+    binding.pry
     
   end
 end
