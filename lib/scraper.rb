@@ -37,7 +37,7 @@ class Scraper
       end
     end
     student
-    binding.pry
+    # binding.pry
         
         
       
