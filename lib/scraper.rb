@@ -19,7 +19,7 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    e
+    student = {}
     profile = Nokogiri::HTML(open(profile_url))
     
     student[:profile_quote] = profile.css(".profile-quote").text 
@@ -45,13 +45,11 @@ class Scraper
       # student[:linkedin] = "#{link}" if link.values.include?('linkedin')
       # student[:github] = "#{link}" if link.values.include?('github')
     # end
-    student
+    # student
     # binding.pry
     
   end
 end
-    # student = {
-href'], :twitter => profile.css('div.social-icon-container a')[0]['href'], 
-    # }
+    
 
 
