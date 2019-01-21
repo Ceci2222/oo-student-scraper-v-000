@@ -24,7 +24,7 @@ class Scraper
     
     profile.css('div.social-icon-container a').map do |link|
       if link.values.to_s.include?('twitter')
-        student[:twitter] = link.css('a')
+        student[:twitter] = link['href']
       elsif link.values.to_s.include?('linkedin')
         student[:linkedin]
       elsif link.values.to_s.include?('github')
